@@ -19,9 +19,6 @@ phases:
       java: openjdk17
     commands:
       - echo intall
-  pre_build:
-    commands:
-      - echo pre_build
   build:
     commands:
       - mvn package
