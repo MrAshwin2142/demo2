@@ -1,29 +1,29 @@
-# version :0.2
-
-phases:
-  build:
-    commands :
-    - mvn clean package
-  
-artifacts:
-  files :
-    target/demo-0.0.1-SNAPSHOT.jar
-  discards-paths: yes
+# # version :0.2
 
 # phases:
-#   install:
-#     runtime-versions:
-#       java: openjdk17
+#   build:
+#     commands :
+#     - mvn clean package
+  
+# artifacts:
+#   files :
+#     target/demo-0.0.1-SNAPSHOT.jar
+#   discards-paths: yes
+
+phases:
+  install:
+    runtime-versions:
+      java: openjdk17
 #     commands:
 #       - echo intall
-#   build:
-#     commands:
-#       - mvn package
+  build:
+    commands:
+      - mvn package
 #       - echo build
 #   post_build:
 #     commands:
 #       - echo post_build
 
-# artifacts:     
-#   files:
-#     - target/demo-0.0.1-SNAPSHOT.jar
+artifacts:     
+  files:
+    - target/demo-0.0.1-SNAPSHOT.jar
